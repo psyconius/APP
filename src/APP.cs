@@ -1,19 +1,12 @@
 ﻿using BepInEx;
-using BepInEx.Configuration;
 using BepInEx.Logging;
 using HarmonyLib;
-using UnityEngine;
 using SideLoader;
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Reflection;
 
 namespace APP
 {
-
     [BepInPlugin(GUID, NAME, VERSION)]
     public class Plugin : BaseUnityPlugin
     {
@@ -22,7 +15,7 @@ namespace APP
         // Choose a NAME for your project, generally the same as your Assembly Name.
         public const string NAME = "Advanced Picks & 'Poons";
         // Increment the VERSION when you release a new version of your mod.
-        public const string VERSION = "0.9.0";
+        public const string VERSION = "0.9.1";
 
         // For accessing your BepInEx Logger from outside of this class (eg Plugin.Log.LogMessage("");)
         public static ManualLogSource Log;
@@ -69,7 +62,6 @@ namespace APP
             //! ExampleConfig = Config.Bind("ExampleCategory", "ExampleSetting", false, "This is an example setting.");
 
             SL.OnPacksLoaded += SL_OnPacksLoaded;
-            SL.OnSceneLoaded += SL_OnSceneLoaded;
 
             Harmony.CreateAndPatchAll(typeof(Harmonize));
         }
@@ -86,40 +78,6 @@ namespace APP
             Recipes.AddRecipesToMerchants();
         }
 
-        private void SL_OnSceneLoaded()
-        {
-            //? Remove this on release
-            AddToolsToInventory();
-        }
-
-        //? To be removed. Adding tools for testing.
-        private void AddToolsToInventory()
-        {
-            Character myCharacter;
-            Item myItem;
-
-            myCharacter = CharacterManager.Instance.GetFirstLocalCharacter();
-            if (!myCharacter.Inventory.OwnsItem(APICK_ID))
-            {
-                Log.LogMessage($"Adding Advanced Pick");
-                myItem = ResourcesPrefabManager.Instance.GetItemPrefab(APICK_ID);
-                myCharacter.Inventory.GenerateItem(myItem, 1, false);
-            }
-
-            if (!myCharacter.Inventory.OwnsItem(APOON_ID))
-            {
-                Log.LogMessage($"Adding Advanced Poon");
-                myItem = ResourcesPrefabManager.Instance.GetItemPrefab(APOON_ID);
-                myCharacter.Inventory.GenerateItem(myItem, 1, false);
-            }
-
-            if (!myCharacter.Inventory.OwnsItem(ASICK_ID))
-            {
-                Log.LogMessage($"Adding Advanced Sickle");
-                myItem = ResourcesPrefabManager.Instance.GetItemPrefab(ASICK_ID);
-                myCharacter.Inventory.GenerateItem(myItem, 1, false);
-            }
-        }
         private void AddToolsToDictionary()
         {
             ItemUtilities.instance.m_gatherableToolEquivalences[DEFPICK_ID] = ItemUtilities.instance.m_gatherableToolEquivalences[DEFPICK_ID].Append(APICK_ID).ToArray();
@@ -141,8 +99,6 @@ namespace APP
                 {
                     MaxDurability = APICK_DURABILITY,
                     BaseValue = APICK_VALUE,
-                    //? Remove/adjust for release
-                    RawWeight = 0f,
                 },
             };
             advSickle.SLPackName = "APP";
@@ -160,8 +116,6 @@ namespace APP
                 {
                     MaxDurability = APICK_DURABILITY,
                     BaseValue = APICK_VALUE,
-                    //? Remove/adjust for release
-                    RawWeight = 0f,
                 },
             };
             expSickle.SLPackName = "APP";
@@ -190,8 +144,6 @@ namespace APP
                     },
                     MaxDurability = APICK_DURABILITY,
                     BaseValue = APICK_VALUE,
-                    //? Remove/adjust for release
-                    RawWeight = 0f,
                 },
             };
             advMiningPick.ApplyTemplate();
@@ -214,8 +166,6 @@ namespace APP
                     },
                     MaxDurability = EPICK_DURABILITY,
                     BaseValue = EPICK_VALUE,
-                    //? Remove/adjust for release
-                    RawWeight = 0f,
                 },
             };
             expMiningPick.ApplyTemplate();
@@ -241,8 +191,6 @@ namespace APP
                     },
                     MaxDurability = APOON_DURABILITY,
                     BaseValue = APOON_VALUE,
-                    //? Remove/adjust for release
-                    RawWeight = 0f,
                 },
             };
             advPoon.ApplyTemplate();
@@ -265,8 +213,6 @@ namespace APP
                     },
                     MaxDurability = EPOON_DURABILITY,
                     BaseValue = EPOON_VALUE,
-                    //? Remove/adjust for release
-                    RawWeight = 0f,
                 },
             };
             expPoon.ApplyTemplate();

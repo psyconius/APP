@@ -183,6 +183,7 @@ namespace APP
         {
             //TODO Make Master recipes
         }
+
         public static void CreateRecipeScrolls()
         {
             //Picks

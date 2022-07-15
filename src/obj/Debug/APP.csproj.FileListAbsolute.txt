@@ -1,0 +1,15 @@
+C:\Users\psyco\Downloads\Outward\Release\APP.dll.config
+C:\Users\psyco\Downloads\Outward\Release\APP.dll
+C:\Users\psyco\Downloads\Outward\APP\obj\Debug\APP.csprojAssemblyReference.cache
+C:\Users\psyco\Downloads\Outward\APP\obj\Debug\APP.csproj.CoreCompileInputs.cache
+C:\Users\psyco\Downloads\Outward\APP\obj\Debug\APP.dll
+D:\Gothiska\Mods\Release\APP.dll.config
+D:\Gothiska\Mods\Release\APP.dll
+D:\Gothiska\Mods\APP\obj\Debug\APP.csprojAssemblyReference.cache
+D:\Gothiska\Mods\APP\obj\Debug\APP.csproj.CoreCompileInputs.cache
+D:\Gothiska\Mods\APP\obj\Debug\APP.dll
+D:\Gothiska\Mods\APP\Release\APP.dll.config
+D:\Gothiska\Mods\APP\Release\APP.dll
+D:\Gothiska\Mods\APP\src\obj\Debug\APP.csprojAssemblyReference.cache
+D:\Gothiska\Mods\APP\src\obj\Debug\APP.csproj.CoreCompileInputs.cache
+D:\Gothiska\Mods\APP\src\obj\Debug\APP.dll

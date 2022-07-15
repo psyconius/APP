@@ -1,0 +1,5 @@
+C:\Users\psyco\Downloads\Outward\Release\GOAT.dll.config
+C:\Users\psyco\Downloads\Outward\Release\GOAT.dll
+C:\Users\psyco\Downloads\Outward\GOAT\obj\Debug\GOAT.csprojAssemblyReference.cache
+C:\Users\psyco\Downloads\Outward\GOAT\obj\Debug\GOAT.csproj.CoreCompileInputs.cache
+C:\Users\psyco\Downloads\Outward\GOAT\obj\Debug\GOAT.dll
