@@ -13,3 +13,10 @@ D:\Gothiska\Mods\APP\Release\APP.dll
 D:\Gothiska\Mods\APP\src\obj\Debug\APP.csprojAssemblyReference.cache
 D:\Gothiska\Mods\APP\src\obj\Debug\APP.csproj.CoreCompileInputs.cache
 D:\Gothiska\Mods\APP\src\obj\Debug\APP.dll
+D:\Gothiska\Outward\APP\Release\APP.dll.config
+D:\Gothiska\Outward\APP\Release\APP.dll
+D:\Gothiska\Outward\APP\src\obj\Debug\APP.csprojAssemblyReference.cache
+D:\Gothiska\Outward\APP\src\obj\Debug\APP.csproj.CoreCompileInputs.cache
+D:\Gothiska\Outward\APP\src\obj\Debug\APP.dll
+D:\Gothiska\Outward\Release\plugins\APP.dll.config
+D:\Gothiska\Outward\Release\plugins\APP.dll

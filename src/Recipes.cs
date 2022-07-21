@@ -296,7 +296,7 @@ namespace APP
                     "3Rx_R0XDLUmYaNWm66SVCQ", // Levant smith (ID1)
                     "EYhBqM653UGhDd5kcdMFXg", // Levant smith (ID2)
                     "Zdg-qTDRa0-qOzzNSbtvzg", // Harmattan smith
-                    "-MSrkT502k63y3CV2j98TQ"  //TODO Sirocco Caravanner - GET SAL DUMAS ID
+                    "H5q78X0xR0SS0hhrNRDQSA"  
                 },
                 DropTableUIDsToAdd = { advToolsDT.UID }
             };
@@ -306,7 +306,7 @@ namespace APP
             {
                 SelectorTargets = {
                     "Zdg-qTDRa0-qOzzNSbtvzg", // Harmattan smith
-                    "-MSrkT502k63y3CV2j98TQ"  //TODO Sirocco Caravanner - GET SAL DUMAS ID
+                    "H5q78X0xR0SS0hhrNRDQSA"  
                 },
                 DropTableUIDsToAdd = { expToolsDT.UID }
             };

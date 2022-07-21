@@ -15,7 +15,7 @@ namespace APP
         // Choose a NAME for your project, generally the same as your Assembly Name.
         public const string NAME = "Advanced Picks & 'Poons";
         // Increment the VERSION when you release a new version of your mod.
-        public const string VERSION = "0.9.1";
+        public const string VERSION = "0.9.6";
 
         // For accessing your BepInEx Logger from outside of this class (eg Plugin.Log.LogMessage("");)
         public static ManualLogSource Log;
@@ -89,38 +89,84 @@ namespace APP
        
         private void SetUpSickles()
         {
-            SL_Item advSickle = new SL_Item()
+            //TODO Think on durability. -ROTATE MODEL
+            SL_Weapon advSickle = new SL_Weapon()
             {
                 Target_ItemID = DEFSICK_ID,
                 New_ItemID = ASICK_ID,
                 Name = "Advanced Sickle",
                 Description = "A quality sickle used to gather items more efficiently.",
-                StatsHolder = new SL_ItemStats()
+                StatsHolder = new SL_WeaponStats()
                 {
+                    BaseDamage = new List<SL_Damage>()
+                    {
+                        new SL_Damage()
+                        {
+                            Damage = 17f,
+                            Type = DamageType.Types.Physical
+                        },
+                    },
                     MaxDurability = APICK_DURABILITY,
                     BaseValue = APICK_VALUE,
                 },
+               
+                ItemVisuals = new SL_ItemVisual()
+                {
+                    Prefab_SLPack = "APP",
+                    Prefab_AssetBundle = "sickle-a",
+                    Prefab_Name = "sickle-a"
+                },
+                
+                SpecialItemVisuals = new SL_ItemVisual()
+                {
+                    Prefab_SLPack = "APP",
+                    Prefab_AssetBundle = "ssickle-a",
+                    Prefab_Name = "ssickle-a"
+                },
+                
             };
             advSickle.SLPackName = "APP";
-
             advSickle.SubfolderName = "AdvancedSickle";
             advSickle.ApplyTemplate();
 
-            SL_Item expSickle = new SL_Item()
+            SL_Weapon expSickle = new SL_Weapon()
             {
                 Target_ItemID = DEFSICK_ID,
                 New_ItemID = ESICK_ID,
                 Name = "Expert Sickle",
                 Description = "A quality sickle used to gather items more efficiently.",
-                StatsHolder = new SL_ItemStats()
+                StatsHolder = new SL_WeaponStats()
                 {
-                    MaxDurability = APICK_DURABILITY,
-                    BaseValue = APICK_VALUE,
+                    BaseDamage = new List<SL_Damage>()
+                    {
+                        new SL_Damage()
+                        {
+                            Damage = 20f,
+                            Type = DamageType.Types.Physical
+                        },
+                    },
+                    MaxDurability = EPICK_DURABILITY,
+                    BaseValue = EPICK_VALUE,
                 },
+                
+                ItemVisuals = new SL_ItemVisual()
+                {
+                    Prefab_SLPack = "APP",
+                    Prefab_AssetBundle = "sickle-a",
+                    Prefab_Name = "sickle-a"
+                },
+
+                
+                SpecialItemVisuals = new SL_ItemVisual()
+                {
+                    Prefab_SLPack = "APP",
+                    Prefab_AssetBundle = "ssickle-a",
+                    Prefab_Name = "ssickle-a"
+                },
+                
             };
             expSickle.SLPackName = "APP";
-
-            expSickle.SubfolderName = "AdvancedSickle";
+            expSickle.SubfolderName = "ExpertSickle";
             expSickle.ApplyTemplate();
         }
 
@@ -146,6 +192,8 @@ namespace APP
                     BaseValue = APICK_VALUE,
                 },
             };
+            advMiningPick.SLPackName = "APP";
+            advMiningPick.SubfolderName = "AdvancedPick";
             advMiningPick.ApplyTemplate();
 
             SL_MeleeWeapon expMiningPick = new SL_MeleeWeapon()
@@ -168,6 +216,8 @@ namespace APP
                     BaseValue = EPICK_VALUE,
                 },
             };
+            expMiningPick.SLPackName = "APP";
+            expMiningPick.SubfolderName = "ExpertPick";
             expMiningPick.ApplyTemplate();
         }
 
@@ -193,6 +243,8 @@ namespace APP
                     BaseValue = APOON_VALUE,
                 },
             };
+            advPoon.SLPackName = "APP";
+            advPoon.SubfolderName = "AdvancedPoon";
             advPoon.ApplyTemplate();
 
             SL_MeleeWeapon expPoon = new SL_MeleeWeapon()
@@ -215,6 +267,8 @@ namespace APP
                     BaseValue = EPOON_VALUE,
                 },
             };
+            expPoon.SLPackName = "APP";
+            expPoon.SubfolderName = "ExpertPoon";
             expPoon.ApplyTemplate();
         }
     }

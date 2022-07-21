@@ -585,14 +585,14 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Gothiska\\Mods\\APP\\src\\APP.csproj",
+      "projectUniqueName": "D:\\Gothiska\\Outward\\APP\\src\\APP.csproj",
       "projectName": "APP",
-      "projectPath": "D:\\Gothiska\\Mods\\APP\\src\\APP.csproj",
+      "projectPath": "D:\\Gothiska\\Outward\\APP\\src\\APP.csproj",
       "packagesPath": "C:\\Users\\psyco\\.nuget\\packages\\",
-      "outputPath": "D:\\Gothiska\\Mods\\APP\\src\\obj\\",
+      "outputPath": "D:\\Gothiska\\Outward\\APP\\src\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "D:\\Gothiska\\Mods\\APP\\src\\NuGet.Config",
+        "D:\\Gothiska\\Outward\\APP\\src\\NuGet.Config",
         "C:\\Users\\psyco\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
