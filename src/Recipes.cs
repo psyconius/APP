@@ -257,6 +257,7 @@ namespace APP
             expSickRecipeScroll.ApplyTemplate();
         }
 
+        //TODO  update droptable UIDs(_dt)
         public static void AddRecipesToMerchants()
         {
             const string ADVTOOLSDT_ID = "gothiska.advtools";
